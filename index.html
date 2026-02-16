@@ -2,40 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hydrogen Research | Personal Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hariharan R | Aerospace & Hydrogen Research</title>
 
 <style>
+*{box-sizing:border-box}
+
 body{
     margin:0;
-    font-family:Arial;
+    font-family:'Segoe UI',Arial,sans-serif;
     background:#020617;
     color:#e5e7eb;
+    line-height:1.6;
 }
 
+/* Header */
 header{
-    background:#020617;
-    padding:30px;
-    text-align:center;
+    background:linear-gradient(135deg,#020617,#020617);
+    padding:70px 10%;
     border-bottom:3px solid #22c55e;
 }
 
-h1{margin:0;color:#22c55e}
-h2{color:#38bdf8}
-
-section{
-    padding:40px 10%;
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
 }
+
+.hero img{
+    width:100%;
+    max-width:280px;
+    border-radius:50%;
+    border:3px solid #22c55e;
+}
+
+h1{
+    margin:0;
+    font-size:44px;
+    color:#22c55e;
+}
+
+.subtitle{
+    color:#94a3b8;
+    font-size:18px;
+    margin:12px 0 20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 22px;
+    margin-right:10px;
+    border-radius:30px;
+    background:#22c55e;
+    color:#020617;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.btn.secondary{
+    background:transparent;
+    border:2px solid #22c55e;
+    color:#22c55e;
+}
+
+.btn:hover{opacity:0.9}
+
+/* Sections */
+section{padding:70px 10%}
 
 .card{
     background:#020617;
     border:1px solid #22c55e;
-    border-radius:12px;
-    padding:25px;
-    margin-bottom:30px;
+    border-radius:14px;
+    padding:30px;
+    margin-bottom:40px;
 }
 
-ul{line-height:1.8}
+h2{color:#38bdf8;margin-top:0}
 
+ul{padding-left:18px;line-height:1.9}
+
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* Project Cards */
+.project{
+    border:1px solid #22c55e;
+    border-radius:12px;
+    padding:18px;
+}
+
+/* Skills */
+.skills span{
+    display:inline-block;
+    border:1px solid #22c55e;
+    border-radius:20px;
+    padding:8px 14px;
+    margin:6px;
+    font-size:14px;
+}
+
+/* Gallery */
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -44,17 +116,18 @@ ul{line-height:1.8}
 
 .gallery img{
     width:100%;
-    border-radius:10px;
+    border-radius:12px;
     border:1px solid #22c55e;
 }
 
+/* Contact */
 input,textarea,button{
     width:100%;
     padding:12px;
-    margin:8px 0;
-    border-radius:6px;
+    margin:10px 0;
+    border-radius:8px;
     border:none;
-    font-size:16px;
+    font-size:15px;
 }
 
 button{
@@ -65,12 +138,17 @@ button{
 
 button:hover{background:#16a34a}
 
+/* Footer */
 footer{
     text-align:center;
-    padding:15px;
-    background:#020617;
-    color:#94a3b8;
+    padding:18px;
     border-top:1px solid #22c55e;
+    color:#94a3b8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero{grid-template-columns:1fr;text-align:center}
 }
 </style>
 </head>
@@ -78,74 +156,138 @@ footer{
 <body>
 
 <header>
-<h1>Hydrogen Research & Innovation</h1>
-<p>Clean Energy • Aerospace • Sustainable Future</p>
+<div class="hero">
+<div>
+<h1>Hariharan R</h1>
+<p class="subtitle">
+2nd Year Aerospace Engineering Student | Hydrogen & Propulsion Research Enthusiast | Unity Developer & CAD Designer
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
+<a href="#contact" class="btn secondary">Contact Me</a>
+</div>
+
+<div>
+<img src="profile.jpg" alt="Hariharan R">
+</div>
+</div>
 </header>
 
 <section>
 
 <div class="card">
-<h2>👨‍🔬 About Me</h2>
+<h2>👨‍🚀 About Me</h2>
 <p>
-I am a researcher and aerospace engineering enthusiast focused on developing hydrogen-based energy systems,
-advanced propulsion technologies, and sustainable aerospace solutions. My vision is to create affordable,
-efficient, and scalable hydrogen systems for transportation, aviation, and space applications.
+I am a passionate 2nd year Aerospace Engineering student with strong hands-on experience in aerospace systems,
+embedded electronics, RC systems, propulsion mechanisms, simulation, CAD design, and interactive 3D development using Unity.
+I strongly believe in learning by building and continuously work on practical engineering projects integrating
+aerodynamics, propulsion, electronics, CAD modeling, simulation, and software development.
 </p>
 </div>
 
 <div class="card">
-<h2>🚀 My Research Areas</h2>
+<h2>🚀 Research Interests</h2>
 <ul>
-<li>Low-cost hydrogen production from water using electrochemical and hybrid methods</li>
-<li>Hydrogen internal combustion engines (H₂ ICE)</li>
-<li>Hydrogen-powered UAVs and aircraft propulsion concepts</li>
-<li>High-efficiency hydrogen storage systems</li>
-<li>Fuel cell integration for aerospace and automotive systems</li>
-<li>Green hydrogen generation using renewable energy</li>
-<li>Hybrid propulsion systems using hydrogen</li>
-<li>Hydrogen-based thermal propulsion for space vehicles</li>
-<li>Hydrogen safety systems and leakage prevention techniques</li>
-<li>Advanced cryogenic hydrogen storage technologies</li>
+<li>Hydrogen Production & Storage Technologies</li>
+<li>Hydrogen Internal Combustion Engines</li>
+<li>Rocket Propulsion & Hybrid Engines</li>
+<li>Thrust Vector Control Systems</li>
+<li>Reusable Launch Vehicles</li>
+<li>UAV & RC Aircraft Systems</li>
+<li>Aerospace Simulation & Game-based Training Systems</li>
 </ul>
+</div>
+
+<div class="card" id="projects">
+<h2>🛠 Projects Completed</h2>
+
+<div class="grid">
+
+<div class="project">
+<h3>RC Aircraft</h3>
+<p>Designed and built a fixed-wing remote-controlled aircraft focusing on aerodynamics, structure, and flight stability.</p>
+</div>
+
+<div class="project">
+<h3>WiFi Controlled Vehicle</h3>
+<p>Developed ESP-based real-time wireless controlled robotic vehicle.</p>
+</div>
+
+<div class="project">
+<h3>Bluetooth Controlled Car</h3>
+<p>Built a Bluetooth-based robotic car using mobile interface and motor control systems.</p>
+</div>
+
+<div class="project">
+<h3>Obstacle Avoidance Robot</h3>
+<p>Autonomous robot with ultrasonic sensing and real-time navigation logic.</p>
+</div>
+
+<div class="project">
+<h3>Rocket with Controllable Fins</h3>
+<p>Model rocket using active fin control system for trajectory stabilization.</p>
+</div>
+
+<div class="project">
+<h3>Thrust Vector Control (TVC)</h3>
+<p>Servo-based thrust vectoring system for rocket propulsion control.</p>
+</div>
+
+<div class="project">
+<h3>Unity Simulation & Game Projects</h3>
+<p>Car physics controllers, flight simulation concepts, UI systems, and gameplay mechanics.</p>
+</div>
+
+</div>
 </div>
 
 <div class="card">
-<h2>🧪 Current Projects</h2>
-<ul>
-<li>Low-budget hydrogen extraction model for educational and startup use</li>
-<li>Hydrogen ICE performance optimization</li>
-<li>Hybrid hydrogen propulsion research for small UAVs</li>
-<li>Hydrogen powered micro-launch vehicle concepts</li>
-</ul>
+<h2>🧠 Technical Skills</h2>
+
+<div class="skills">
+<span>Rocket Propulsion</span>
+<span>Thrust Vector Control</span>
+<span>RC Aircraft Design</span>
+<span>Embedded Systems</span>
+<span>Arduino</span>
+<span>ESP32</span>
+<span>WiFi & Bluetooth</span>
+<span>Unity Engine</span>
+<span>C#</span>
+<span>SolidWorks</span>
+<span>Fusion 360</span>
+<span>Blender</span>
 </div>
 
-    
-    <div class="card">
-<h2>💡 Share Your Ideas</h2>
-<p>
-Have innovative ideas, improvements, or research suggestions?  
-Send them directly to my email using the form below.
-</p>
+</div>
+
+<div class="card">
+<h2>📸 Project Gallery</h2>
+<div class="gallery">
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+</div>
+</div>
+
+<div class="card" id="contact">
+<h2>📩 Contact & Collaboration</h2>
+<p>Open to research collaboration, internships, aerospace projects, and startup opportunities.</p>
 
 <form action="https://formsubmit.co/harivedhu2@gmail.com" method="POST">
-
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="6" placeholder="Write your idea or suggestion here..." required></textarea>
-
-<button type="submit">Send Idea</button>
-
+<textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+<button type="submit">Send Message</button>
 </form>
-
 </div>
 
 </section>
 
 <footer>
-© 2026 | Hydrogen Research & Innovation Platform
+© 2026 | Hariharan R | Aerospace & Hydrogen Research Portfolio
 </footer>
 
 </body>
 </html>
-
-
